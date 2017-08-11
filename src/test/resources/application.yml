@@ -1,0 +1,11 @@
+application:
+  name: QXCMP
+spring:
+  datasource:
+    url: jdbc:h2:mem:qxcmp;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: qxcmp
+    password: qxcmp
+    platform: h2
+  jpa:
+    database-platform: H2

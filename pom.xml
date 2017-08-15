@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.qxcmp</groupId>
         <artifactId>qxcmp-parent</artifactId>
-        <version>1.0.0.RELEASE-SNAPSHOT</version>
+        <version>1.0.0.RELEASE</version>
     </parent>
 
     <artifactId>qxcmp-bible</artifactId>

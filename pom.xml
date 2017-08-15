@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <artifactId>qxcmp</artifactId>
         <groupId>com.qxcmp</groupId>
+        <artifactId>qxcmp-parent</artifactId>
         <version>1.0.0.RELEASE-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    
+
     <artifactId>qxcmp-bible</artifactId>
+    <version>1.0.0.RELEASE-SNAPSHOT</version>
 
     <name>QXCMP Bible Module</name>
 
     <dependencies>
         <dependency>
             <groupId>com.qxcmp</groupId>
-            <artifactId>qxcmp-spider</artifactId>
+            <artifactId>qxcmp-framework</artifactId>
             <version>1.0.0.RELEASE-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
 </project>

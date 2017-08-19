@@ -13,6 +13,14 @@
     <version>1.0.0.RELEASE-SNAPSHOT</version>
 
     <name>QXCMP Bible Module</name>
+    <description>QXCMP Bible Module</description>
+    <url>https://github.com/AaricChen/qxcmp-bible</url>
+
+    <scm>
+        <connection>scm:git:git@github.com:AaricChen/qxcmp-bible.git</connection>
+        <developerConnection>scm:git:git@github.com:AaricChen/qxcmp-bible.git</developerConnection>
+        <url>git@github.com:AaricChen/qxcmp-bible.git</url>
+    </scm>
 
     <dependencies>
         <dependency>

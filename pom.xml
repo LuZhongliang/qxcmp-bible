@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.qxcmp</groupId>
+        <groupId>com.github.aaricchen</groupId>
         <artifactId>qxcmp-parent</artifactId>
-        <version>1.0.0.RELEASE</version>
+        <version>1.0.1.RELEASE</version>
     </parent>
 
     <artifactId>qxcmp-bible</artifactId>
@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.qxcmp</groupId>
+            <groupId>com.github.aaricchen</groupId>
             <artifactId>qxcmp-framework</artifactId>
             <version>1.0.0.RELEASE-SNAPSHOT</version>
         </dependency>

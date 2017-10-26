@@ -6,11 +6,11 @@
     <parent>
         <groupId>com.github.aaricchen</groupId>
         <artifactId>qxcmp-parent</artifactId>
-        <version>1.0.1.RELEASE</version>
+        <version>2.0.0.RELEASE-SNAPSHOT</version>
     </parent>
 
     <artifactId>qxcmp-bible</artifactId>
-    <version>1.0.0.RELEASE-SNAPSHOT</version>
+    <version>2.0.0.RELEASE-SNAPSHOT</version>
 
     <name>QXCMP Bible Module</name>
     <description>QXCMP Bible Module</description>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>com.github.aaricchen</groupId>
             <artifactId>qxcmp-framework</artifactId>
-            <version>1.0.0.RELEASE-SNAPSHOT</version>
+            <version>2.0.0.RELEASE-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

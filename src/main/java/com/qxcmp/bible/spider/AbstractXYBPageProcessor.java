@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 import us.codecraft.webmagic.Page;
 
 import java.io.File;
+import java.nio.charset.Charset;
 import java.util.List;
 
 public abstract class AbstractXYBPageProcessor extends AbstractBiblePageProcessor {
@@ -24,7 +25,7 @@ public abstract class AbstractXYBPageProcessor extends AbstractBiblePageProcesso
                 String verseContent = verses.get(i + 3);
 
                 FileUtils.writeStringToFile(new File(String.format("/tmp/bible/%s.txt", version.getName())),
-                        String.format("%s %d %d [[%s]]\n", bookName, chapterId, verseId, verseContent), true);
+                        String.format("%s %d %d [[%s]]\n", bookName, chapterId, verseId, verseContent), Charset.defaultCharset(), true);
 //
 //                Optional<Verse> verseOptional = verseService.findOne(version, bookId, chapterId, verseId);
 //

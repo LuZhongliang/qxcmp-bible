@@ -12,6 +12,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Objects;
 
@@ -73,7 +74,7 @@ public class VerseService implements QXCMPConfigurator {
         BibleVersion version = BibleVersion.fromName(StringUtils.substringBefore(file, ".txt"));
 
         try {
-            IOUtils.readLines(new ClassPathResource("/bible/" + file).getInputStream()).forEach(s -> {
+            IOUtils.readLines(new ClassPathResource("/bible/" + file).getInputStream(), Charset.defaultCharset()).forEach(s -> {
                 String mainContent = StringUtils.substringBefore(s, "[[");
                 String bookName = mainContent.split("\\s+")[0];
                 int chapter = Integer.parseInt(mainContent.split("\\s+")[1]);

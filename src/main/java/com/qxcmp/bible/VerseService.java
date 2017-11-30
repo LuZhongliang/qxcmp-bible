@@ -63,7 +63,7 @@ public class VerseService implements QxcmpConfigurator {
     }
 
     @Override
-    public void config() throws Exception {
+    public void config() {
         log.info("Loading 《简体和合本》");
         loadBible("简体和合本.txt");
         log.info("《简体和合本》 loaded");

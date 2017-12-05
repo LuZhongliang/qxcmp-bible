@@ -4,7 +4,7 @@ import com.qxcmp.bible.BibleHelper;
 import com.qxcmp.bible.BibleVersion;
 import com.qxcmp.bible.Verse;
 import com.qxcmp.bible.VerseService;
-import com.qxcmp.framework.spdier.SpiderPageProcessor;
+import com.qxcmp.spdier.SpiderPageProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import us.codecraft.webmagic.Page;
 

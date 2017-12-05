@@ -1,8 +1,8 @@
 package com.qxcmp.bible.spider;
 
-import com.qxcmp.framework.spdier.SpiderEntityPipeline;
-import com.qxcmp.framework.user.User;
-import com.qxcmp.framework.user.UserService;
+import com.qxcmp.spdier.SpiderEntityPipeline;
+import com.qxcmp.user.User;
+import com.qxcmp.user.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;

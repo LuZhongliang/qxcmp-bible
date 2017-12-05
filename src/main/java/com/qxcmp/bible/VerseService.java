@@ -3,7 +3,7 @@ package com.qxcmp.bible;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
-import com.qxcmp.framework.core.QxcmpConfigurator;
+import com.qxcmp.core.QxcmpConfigurator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;

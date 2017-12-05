@@ -2,7 +2,7 @@ package com.qxcmp.bible.spider;
 
 import com.qxcmp.bible.BibleVersion;
 import com.qxcmp.bible.Verse;
-import com.qxcmp.framework.spdier.Spider;
+import com.qxcmp.spdier.Spider;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

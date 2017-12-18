@@ -2,6 +2,7 @@ package com.qxcmp.bible;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Table;
 import com.qxcmp.core.QxcmpConfigurator;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * 经文服务
@@ -27,11 +29,34 @@ import java.util.Objects;
 public class VerseService implements QxcmpConfigurator {
 
     /**
+     * 圣经书卷名称
+     * <p>
+     * 1. 圣经版本
+     * 2. 书卷名称列表
+     */
+    private HashMultimap<BibleVersion, String> bookNames = HashMultimap.create();
+
+    /**
      * 圣经存贮对象
+     * <p>
+     * 1. 圣经版本
+     * 2. 书卷名称
+     * 3. 书卷经文（经文节数， 经文）
      */
     private Table<BibleVersion, String, ArrayListMultimap<Integer, Verse>> verses = HashBasedTable.create();
 
     private final BibleHelper bibleHelper;
+
+    /**
+     * 获取指定圣经版本的书卷名称
+     *
+     * @param version 圣经版本
+     *
+     * @return 书卷名称列表
+     */
+    public Set<String> getBookNames(BibleVersion version) {
+        return bookNames.get(version);
+    }
 
     public BibleSearchResponse search(BibleSearchRequest request) {
         String bookPinyin = bibleHelper.covertBookNameToPinyin(request.getBook());
@@ -64,9 +89,7 @@ public class VerseService implements QxcmpConfigurator {
 
     @Override
     public void config() {
-        log.info("Loading 《简体和合本》");
         loadBible("简体和合本.txt");
-        log.info("《简体和合本》 loaded");
     }
 
     private void loadBible(String file) {
@@ -97,6 +120,8 @@ public class VerseService implements QxcmpConfigurator {
                         .verseId(verseId)
                         .versionContent(verseContent)
                         .build());
+
+                bookNames.put(version, bookName);
             });
         } catch (IOException e) {
             log.error("Can't load bible {}, cause: {}", file, e.getMessage());

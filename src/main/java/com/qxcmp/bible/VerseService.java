@@ -118,7 +118,7 @@ public class VerseService implements QxcmpConfigurator {
                         .bookName(bookName)
                         .chapterId(chapter)
                         .verseId(verseId)
-                        .versionContent(verseContent)
+                        .content(verseContent)
                         .build());
 
                 bookNames.put(version, bookName);

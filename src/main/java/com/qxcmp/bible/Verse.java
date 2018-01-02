@@ -22,5 +22,5 @@ public class Verse {
 
     private int verseId;
 
-    private String versionContent;
+    private String content;
 }
